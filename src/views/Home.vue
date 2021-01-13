@@ -1,18 +1,25 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <CircleProgress 
+          :single="true"
+          :percentage="84" 
+          :progressColor="'#0000ff'"
+          :circleColor="'rgba(0,0,0,0.06)'" 
+          :strokeWidth="8"
+          :showNumber="true"
+          :separated="false"
+      />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// @ts-nocheck
+import CircleProgress from '@/components/CircleProgress.vue'
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    CircleProgress
   }
 }
 </script>
