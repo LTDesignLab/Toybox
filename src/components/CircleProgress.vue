@@ -3,17 +3,18 @@
   <!-- single value -->
   <div class="circle-progress cp" :style="{width:size+'px',height:size+'px'}" :data-pct="animatedProgress + '%'">
 
+    <h4>Circle Title</h4>
+
     <svg class="pie" :width="size" :height="size" :viewPort="'0 0 '+ size + ' ' + size" version="1.1" xmlns="http://www.w3.org/2000/svg">
       
       <circle 
       class="ring"
-      stroke="#000000"
+      :stroke="ringColor"
       :r="r"
       :cx="size/2"
       :cy="size/2"
       :stroke-width="strokeWidth"
       fill="none"
-      style="opacity: 0.1"
       >
       </circle>
 
@@ -140,6 +141,12 @@ export default {
 
 <style lang="scss" scoped>
 
+h4 {
+  position: absolute;
+  padding-top: 88px;
+  opacity: 0.4;
+}
+
 .cp {
   display: flex;
   justify-content: center;
@@ -156,9 +163,10 @@ export default {
   font-weight: 900;
   width:100%;
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
+  font-family: monospace;
 }
 .circle-progress, .circle-progress-snap {
   svg {

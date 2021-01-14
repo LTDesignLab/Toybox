@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
+    <router-link to="/">Components</router-link>
     <router-link to="/about">About</router-link>
   </div>
   <router-view/>
@@ -15,15 +15,25 @@
   color: #2c3e50;
 }
 
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
 #nav {
   padding: 30px;
 
   a {
     font-weight: bold;
+    font-size: 14px;
     color: #2c3e50;
+    margin-left: 6px;
+    margin-right: 6px;
+    text-decoration: none;
+    opacity: 0.4;
 
     &.router-link-exact-active {
-      color: #42b983;
+      opacity: 1;
     }
   }
 }
